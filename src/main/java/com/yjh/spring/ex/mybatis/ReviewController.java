@@ -10,6 +10,7 @@ import com.yjh.spring.ex.mybatis.bo.ReviewBO;
 import com.yjh.spring.ex.mybatis.model.Review;
 
 @Controller
+@RequestMapping("/mybatis")
 public class ReviewController {
 
 	@Autowired
@@ -17,7 +18,7 @@ public class ReviewController {
 	
 	// id가 3인 데이터 조회
 	@ResponseBody
-	@RequestMapping("/mybatis/ex01")
+	@RequestMapping("/ex01")
 	public Review review(
 			@RequestParam("id") int id
 //			@RequestParam(value="id", required=false)
@@ -28,4 +29,24 @@ public class ReviewController {
 		
 		return review;
 	}
+	
+	@RequestMapping("/ex02")
+	@ResponseBody
+	public String addReview() {
+		
+//		int count = reviewBO.addReview(4, "콤비네이션피자", "김인규", 4.5, "할인도 많이 받고 잘 먹었습니다.");
+	
+		Review review = new Review();
+		review.setStoreId(2);
+		review.setMenu("뿌링클");
+		review.setUserName("김인규");
+		review.setPoint(4.0);
+		review.setReview("역시 뿌링클이 진리입니다!!");
+		
+		int count = reviewBO.addReviewByObject(review);
+		
+		return "삽입결과" + count;
+	}
+	
+
 }
