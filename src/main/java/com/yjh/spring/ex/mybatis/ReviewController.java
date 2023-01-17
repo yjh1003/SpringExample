@@ -17,8 +17,8 @@ public class ReviewController {
 	private ReviewBO reviewBO;
 	
 	// id가 3인 데이터 조회
-	@ResponseBody
 	@RequestMapping("/ex01")
+	@ResponseBody
 	public Review review(
 			@RequestParam("id") int id
 //			@RequestParam(value="id", required=false)

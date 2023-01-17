@@ -7,40 +7,40 @@
   <mapper namespace="com.yjh.spring.ex.jsp.dao.NewUserDAO">
   
   	<select id="selectLastUser" resultType="com.yjh.spring.ex.jsp.model.NewUser">
-  		SELECT
-  			`id`
-  			, `name`
-  			, `yyyymmdd`
-  			, `email`
-  			, `introduce`
-  			, `createdAt`
-  			, `updatedAt`
-  		FROM
-  			`new_user`
-  		ORDERBY
-  			`id` DESC
-  		LIMIT 1
+		SELECT 
+			`id`
+			, `name`
+			, `yyyymmdd`
+			, `email`
+			, `introduce`
+			, `createdAt`
+			, `updatedAt`
+		FROM 
+			`new_user`
+		ORDER BY 
+			`id` DESC 
+		LIMIT 1
   	</select>
   	
   	<insert id="insertUser" parameterType="map">
-  		INSERT INTO
-  			`new_user`
-  		(
-  		  	, `name`
-  			, `yyyymmdd`
-  			, `email`
-  			, `introduce`
-  			, `createdAt`
-  			, `updatedAt`
-  		)
-  		VALUE
-  		(
-  			#{name}
-  			, #{birthday}
-  			, #{email}
-  			, #{introduce}
-  			, now()
-  			, now()
-  		)
+		INSERT INTO
+			`new_user`
+		(
+			`name`
+			, `yyyymmdd`
+			, `email`
+			, `introduce`
+			, `createdAt`
+			, `updatedAt`
+		)
+		VALUE 
+		(
+			#{name}
+			, #{birthday}
+			, #{email}
+			, #{introduce}
+			, now()
+			, now()
+		)
   	</insert>
   </mapper>

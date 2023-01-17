@@ -8,9 +8,9 @@ public class NewUser {
 	private String name;
 	private String yyyymmdd;
 	private String email;
+	private String introduce;
 	private Date createdAt;
 	private Date updatedAt;
-	
 	public int getId() {
 		return id;
 	}
@@ -35,6 +35,12 @@ public class NewUser {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String getIntroduce() {
+		return introduce;
+	}
+	public void setIntroduce(String introduce) {
+		this.introduce = introduce;
+	}
 	public Date getCreatedAt() {
 		return createdAt;
 	}
@@ -47,4 +53,6 @@ public class NewUser {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
+	
+
 }

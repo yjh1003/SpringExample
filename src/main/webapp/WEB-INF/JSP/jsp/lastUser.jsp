@@ -16,15 +16,15 @@
 		</tr>
 		<tr>
 			<th>생년월일</th>
-			<td>${user.yyyymmdd}</td>
+			<td>${user.yyyymmdd }</td>
 		</tr>
 		<tr>
 			<th>이메일</th>
-			<td>${user.email}</td>
+			<td>${user.email }</td>
 		</tr>
 		<tr>
 			<th>자기소개</th>
-			<td>${user.introduce}</td>
+			<td>${user.introduce }</td>
 		</tr>
 	</table>
 
