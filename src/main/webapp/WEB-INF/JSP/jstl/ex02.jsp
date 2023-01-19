@@ -49,6 +49,7 @@
 			<th>취미</th>
 		</tr>
 	</thead>
+	<tbody>
 		<c:forEach var="user" items="${userList }">
 		<tr>
 			<td>${user.name }</td>
@@ -56,8 +57,6 @@
 			<td>${user.hobby }</td>
 		</tr>
 		</c:forEach>
-
-	<tbody>
 	</tbody>
 	</table>
 	
